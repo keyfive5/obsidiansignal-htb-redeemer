@@ -6,22 +6,12 @@ A collection of hands‑on HTB labs, automation scripts, and published write‑u
 
 ## 📚 Table of Contents
 
-1. [HTB “Dancing” – SMB Exploit](#htb-dancing--smb-exploit)  
-2. [HTB “Redeemer” – Redis Exploit](#htb-redeemer--redis-exploit)  
+1. [HTB “Redeemer” – Redis Exploit](#htb-redeemer--redis-exploit)  
 3. [Published Articles](#published-articles)  
 4. [Repository Structure](#repository-structure)  
 5. [How to Reproduce](#how-to-reproduce)  
 6. [Connect with Me](#connect-with-me)
 
----
-
-## HTB “Dancing” – SMB Exploit
-
-- **Write‑Up:** [writeup/lab-writeup.md](writeup/lab-writeup.md)  
-- **PDF Report:** [writeup/lab-report.pdf](writeup/lab-report.pdf)  
-- **Automation:** `scripts/enum-smb.sh`  
-- **GitHub:** https://github.com/keyfive5/obsidiansignal-htb-dancing  
-- **Dev.to Tutorial:** https://dev.to/keyfive5/exploiting-htbs-dancing-box-with-smb-misconfiguration  
 
 ---
 
